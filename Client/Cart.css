@@ -1,0 +1,114 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.cart-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cart-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Header Row */
+.cart-header-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 10px 0;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  font-weight: bold;
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+/* Cart Items */
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Quantity Input */
+.qty-input {
+  width: 60px;
+  padding: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Remove Button */
+.cart-item button {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+  background-color: #c82333;
+}
+
+/* Cancel All and Back Buttons */
+.cancel-btn,
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.cancel-btn:hover,
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Total */
+.cart-box h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .cart-header-row,
+  .cart-item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px;
+  }
+
+  .cart-header-row span,
+  .cart-item span {
+    font-size: 14px;
+  }
+
+  .qty-input {
+    width: 50px;
+  }
+
+  .cart-box {
+    padding: 20px;
+  }
+}

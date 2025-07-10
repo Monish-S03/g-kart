@@ -1,0 +1,119 @@
+.categorys-products-section {
+  padding: 30px;
+  background-color: #f8f9fa;
+}
+
+.categorys-products-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+.categorys-products-empty {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.categorys-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.categorys-products-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.categorys-products-card:hover {
+  transform: translateY(-5px);
+  background-color: antiquewhite;
+}
+
+/* NEW: Maintain image aspect ratio */
+.aspect-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; /* 3:2 ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.aspect-ratio-box img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 77%;
+  height: 100%;
+  /* object-fit: cover; */
+  padding-left: 100px;
+}
+
+.categorys-products-title {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.categorys-products-price {
+  font-size: 1rem;
+  color: #009688;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.categorys-products-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.categorys-products-btn:hover {
+  background-color: #0056b3;
+}
+
+.categorys-products-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.categorys-products-btn:hover {
+  background-color: #0056b3;
+}
+.categorys-products-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.categorys-products-btn:hover {
+  background-color: #0056b3;
+}
+
+
+

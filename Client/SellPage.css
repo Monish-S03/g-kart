@@ -1,0 +1,53 @@
+.seller-form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.seller-form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.seller-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.seller-input,
+.seller-textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.seller-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.seller-submit-btn {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.seller-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.seller-message {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+}

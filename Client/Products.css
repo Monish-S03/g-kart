@@ -1,0 +1,129 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 2500px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.8s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: aquamarine;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 1.05rem;
+  margin: 12px 0 8px;
+  text-align: center; 
+}
+
+
+.product-card p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 20px;
+  font-weight: bold;
+  color: white;
+  background: #1e66c1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 20%, transparent 70%);
+  background-size: 100% 100%;
+  animation: wave 4s linear infinite;
+  z-index: 0;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2e86de, #1e66c1);
+  opacity: 0.8;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-25%) translateY(-10%) scale(1);
+  }
+  50% {
+    transform: translateX(25%) translateY(10%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-25%) translateY(-10%) scale(1);
+  }
+}
+
+
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-card {
+    width: 90%;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+

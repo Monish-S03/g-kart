@@ -1,0 +1,64 @@
+/* Orders.css */
+
+.orders-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.orders-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.orders-loading,
+.orders-empty,
+.orders-error {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+.orders-list {
+  list-style: none;
+  padding: 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
+.order-image {
+  width: 220px;
+  height: 220px;
+  object-fit:contain;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+.order-details {
+  flex: 1;
+}
+
+.cancel-button {
+  margin-top: 8px;
+  margin-left: 10px;
+  padding: 6px 12px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-button:hover {
+  background-color: #e60000;
+}
+

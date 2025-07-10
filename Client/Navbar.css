@@ -1,0 +1,180 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1976d2;
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap;
+  position: relative;
+}
+.navbar:hover{
+  color: rgb(238, 237, 236);
+}
+/* Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.search-box {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+  max-width: 90vw;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-count {
+  background-color: red;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  color: white;
+}
+.navbar-right a[href="/admin-login"] {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-right a[href="/admin-login"]:hover {
+  background-color: white;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+/* Dropdown Menu */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: #fff;
+  color: black;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+  color: #1976d2;
+  text-decoration: underline;
+  background-color: antiquewhite;
+}
+
+/* Mobile Toggle Button */
+.toggle-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures items align from left */
+    background-color: #1976d2;
+    width: 100%;
+    padding: 10px 15px;
+    position: absolute;
+    top: 60px; /* adjust according to your navbar height */
+    left: 0;
+    z-index: 999;
+  }
+
+  .navbar-right.open {
+    display: flex;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-right a[href="/admin-login"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 0;
+    background-color: #ffffff;
+    color: #1976d2;
+    font-weight: bold;
+  }
+}
